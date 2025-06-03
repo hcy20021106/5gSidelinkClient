@@ -91,6 +91,8 @@ extern const char *duplex_mode[];
 THREAD_STRUCT thread_struct;
 nrUE_params_t nrUE_params;
 
+int udp_socket = -1;
+
 // Thread variables
 pthread_cond_t nfapi_sync_cond;
 pthread_mutex_t nfapi_sync_mutex;

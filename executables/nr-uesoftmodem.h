@@ -86,8 +86,11 @@ typedef struct {
   tpool_t        Tpool;             // thread pool 
 } nrUE_params_t;
 extern uint64_t get_nrUE_optmask(void);
+
 extern uint64_t set_nrUE_optmask(uint64_t bitmask);
 extern nrUE_params_t *get_nrUE_params(void);
+
+extern int udp_socket;
 
 
 // In nr-ue.c

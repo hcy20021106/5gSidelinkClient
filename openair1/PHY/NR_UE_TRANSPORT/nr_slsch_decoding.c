@@ -367,7 +367,7 @@ uint32_t nr_slsch_decoding(PHY_VARS_NR_UE *phy_vars_ue,
                                               NR_POLAR_SCI2_AGGREGATION_LEVEL);
 
   if (decoder_state) {
-    LOG_E(NR_PHY, "polar_decoder_int16 failed with ret %d for slot %d\n", decoder_state, nr_slot_rx);
+    LOG_E(NR_PHY, "polar_decoder_int16 failed! with ret %d for slot %d\n", decoder_state, nr_slot_rx);
     return(decoder_state);
   }
   #endif

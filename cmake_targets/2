@@ -1,0 +1,419 @@
+1511.311099 [ENB_APP]   nfapi running mode: MONOLITHIC
+1512.344165 [ITTI]   Starting itti queue: TASK_UNKNOWN as task 0
+1512.344204 [ITTI]   Starting itti queue: TASK_TIMER as task 1
+1512.344212 [ITTI]   Starting itti queue: TASK_L2L1 as task 2
+1512.344220 [ITTI]   Starting itti queue: TASK_BM as task 3
+1512.344227 [ITTI]   Starting itti queue: TASK_PHY_ENB as task 4
+1512.344234 [ITTI]   Starting itti queue: TASK_MAC_ENB as task 5
+1512.344241 [ITTI]   Starting itti queue: TASK_MAC_GNB as task 6
+1512.344247 [ITTI]   Starting itti queue: TASK_RLC_ENB as task 7
+1512.344254 [ITTI]   Starting itti queue: TASK_RRC_ENB_NB_IoT as task 8
+1512.344260 [ITTI]   Starting itti queue: TASK_PDCP_ENB as task 9
+1512.344266 [ITTI]   Starting itti queue: TASK_PDCP_GNB as task 10
+1512.344274 [ITTI]   Starting itti queue: TASK_DATA_FORWARDING as task 11
+1512.344280 [ITTI]   Starting itti queue: TASK_END_MARKER as task 12
+1512.344288 [ITTI]   Starting itti queue: TASK_RRC_ENB as task 13
+1512.344294 [ITTI]   Starting itti queue: TASK_RRC_GNB as task 14
+1512.344300 [ITTI]   Starting itti queue: TASK_RAL_ENB as task 15
+1512.344307 [ITTI]   Starting itti queue: TASK_S1AP as task 16
+1512.344314 [ITTI]   Starting itti queue: TASK_NGAP as task 17
+1512.344320 [ITTI]   Starting itti queue: TASK_X2AP as task 18
+1512.344327 [ITTI]   Starting itti queue: TASK_M2AP_ENB as task 19
+1512.344334 [ITTI]   Starting itti queue: TASK_M2AP_MCE as task 20
+1512.344344 [ITTI]   Starting itti queue: TASK_M3AP as task 21
+1512.344350 [ITTI]   Starting itti queue: TASK_M3AP_MME as task 22
+1512.344357 [ITTI]   Starting itti queue: TASK_M3AP_MCE as task 23
+1512.344363 [ITTI]   Starting itti queue: TASK_SCTP as task 24
+1512.344369 [ITTI]   Starting itti queue: TASK_ENB_APP as task 25
+1512.344376 [ITTI]   Starting itti queue: TASK_GNB_APP as task 26
+1512.344383 [ITTI]   Starting itti queue: TASK_MCE_APP as task 27
+1512.344390 [ITTI]   Starting itti queue: TASK_MME_APP as task 28
+1512.344397 [ITTI]   Starting itti queue: TASK_FLEXRAN_AGENT as task 29
+1512.351129 [ITTI]   Starting itti queue: TASK_PHY_UE as task 30
+1512.351147 [ITTI]   Starting itti queue: TASK_MAC_UE as task 31
+1512.351156 [ITTI]   Starting itti queue: TASK_RLC_UE as task 32
+1512.351163 [ITTI]   Starting itti queue: TASK_PDCP_UE as task 33
+1512.351169 [ITTI]   Starting itti queue: TASK_RRC_UE as task 34
+1512.351176 [ITTI]   Starting itti queue: TASK_RRC_NRUE as task 35
+1512.351183 [ITTI]   Starting itti queue: TASK_NAS_UE as task 36
+1512.351189 [ITTI]   Starting itti queue: TASK_RAL_UE as task 37
+1512.351196 [ITTI]   Starting itti queue: TASK_GTPV1_U as task 38
+1512.351202 [ITTI]   Starting itti queue: TASK_CU_F1 as task 39
+1512.351208 [ITTI]   Starting itti queue: TASK_DU_F1 as task 40
+1512.351215 [ITTI]   Starting itti queue: TASK_CUCP_E1 as task 41
+1512.351224 [ITTI]   Starting itti queue: TASK_CUUP_E1 as task 42
+1512.351230 [ITTI]   Starting itti queue: TASK_RRC_UE_SIM as task 43
+1512.351237 [ITTI]   Starting itti queue: TASK_RRC_GNB_SIM as task 44
+1512.351243 [ITTI]   Starting itti queue: TASK_RRC_NSA_UE as task 45
+1512.351249 [ITTI]   Starting itti queue: TASK_RRC_NSA_NRUE as task 46
+1512.351256 [ITTI]   Starting itti queue: TASK_NAS_NRUE as task 47
+1512.351274 [OPT]   OPT disabled
+1512.351950 [HW]   Version: Branch: episys-sl-dev Abrev. Hash: fcaa47a3ab Date: Fri Nov 10 15:26:46 2023 +0000
+1512.351967 [NR_RRC]   Initializing Sidelink Sync configuration for UE
+1512.351973 [NR_RRC]   Initialization of Sidelink Sync Pre-configuration for UE ... Done
+1512.351979 [NR_MAC]   [UE0] Applying default macMainConfig
+1512.351981 [MAC]   Running without CellGroupConfig
+1512.351984 [NR_MAC]   Getting SL parameters
+1512.352145 [PHY]   Set UE mode 6, UE_fo_compensation 0, UE_scan_carrier 0, UE_no_timing_correction 0 
+, chest-freq 0
+1512.352156 [PHY]   Set UE nb_rx_antenna 1, nb_tx_antenna 1, threequarter_fs 0, ssb_start_subcarrier 516
+1512.352159 [HW]   Setting mac->if_module = NULL b/c we config PHY in nr_phy_config_request_sl (for now - TODO)
+1512.352162 [NR_PHY]   nrUE configured
+1512.352164 [PHY]   Initializing frame parms: set nb_antenna_ports_gNB 1, tdd_config, 3, Nid_cell 0
+1512.352176 [PHY]   not found same deltaf_raster == scs_khz, use only band and last deltaf_raster 
+1512.352178 [NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[16].band = 38)
+1512.352180 [NR_MAC]   NR band 38, duplex mode TDD, duplex spacing = 0 KHz
+1512.352182 [PHY]   not found same deltaf_raster == scs_khz, use only band and last deltaf_raster 
+1512.352184 [NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[16].band = 38)
+1512.352185 [PHY]   Initializing frame parms: DL frequency 3619080000 Hz, UL frequency 3619080000 Hz: band 38, uldl offset 0 Hz
+1512.352187 [PHY]   Initializing frame parms for mu 1, N_RB_DL 106, N_RB_SL 52, Ncp 0
+1512.352190 [PHY]   Init: N_RB_DL 52, first_carrier_offset 0, nb_prefix_samples 72,nb_prefix_samples0 88
+1512.352192 [PHY]   Initializing UE vars for gNB TXant 1, UE RXant 1
+1512.546152 [PHY]   Doing symbol rotation calculation for gNB TX/RX, f0 3619080000.000000 Hz, Nsymb 28
+1512.546182 [PHY]   Symbol rotation 0/28 => tl 0.000000 (18204,-27245) (0.156250)
+1512.546186 [PHY]   Symbol rotation 1/28 => tl 0.000036 (-23170,-23170) (0.375000)
+1512.546189 [PHY]   Symbol rotation 2/28 => tl 0.000072 (-27245,18204) (0.593750)
+1512.546191 [PHY]   Symbol rotation 3/28 => tl 0.000108 (12539,30272) (0.812500)
+1512.546194 [PHY]   Symbol rotation 4/28 => tl 0.000143 (32137,-6393) (0.031250)
+1512.546196 [PHY]   Symbol rotation 5/28 => tl 0.000179 (-1,-32767) (0.250000)
+1512.546198 [PHY]   Symbol rotation 6/28 => tl 0.000215 (-32138,-6393) (0.468750)
+1512.546200 [PHY]   Symbol rotation 7/28 => tl 0.000250 (-12540,30272) (0.687500)
+1512.546203 [PHY]   Symbol rotation 8/28 => tl 0.000286 (27244,18204) (0.906250)
+1512.546205 [PHY]   Symbol rotation 9/28 => tl 0.000322 (23169,-23170) (0.125000)
+1512.546207 [PHY]   Symbol rotation 10/28 => tl 0.000357 (-18205,-27245) (0.343750)
+1512.546209 [PHY]   Symbol rotation 11/28 => tl 0.000393 (-30273,12539) (0.562500)
+1512.546212 [PHY]   Symbol rotation 12/28 => tl 0.000429 (6392,32137) (0.781250)
+1512.546214 [PHY]   Symbol rotation 13/28 => tl 0.000464 (32767,0) (1.000000)
+1512.546216 [PHY]   Symbol rotation 14/28 => tl 0.000500 (18204,-27245) (0.156250)
+1512.546218 [PHY]   Symbol rotation 15/28 => tl 0.000536 (-23170,-23170) (0.375000)
+1512.546220 [PHY]   Symbol rotation 16/28 => tl 0.000572 (-27245,18204) (0.593750)
+1512.546222 [PHY]   Symbol rotation 17/28 => tl 0.000608 (12539,30272) (0.812500)
+1512.546225 [PHY]   Symbol rotation 18/28 => tl 0.000643 (32137,-6393) (0.031250)
+1512.546227 [PHY]   Symbol rotation 19/28 => tl 0.000679 (0,-32767) (0.250000)
+1512.546229 [PHY]   Symbol rotation 20/28 => tl 0.000715 (-32138,-6393) (0.468750)
+1512.546231 [PHY]   Symbol rotation 21/28 => tl 0.000750 (-12540,30272) (0.687500)
+1512.546233 [PHY]   Symbol rotation 22/28 => tl 0.000786 (27244,18204) (0.906250)
+1512.546236 [PHY]   Symbol rotation 23/28 => tl 0.000822 (23169,-23170) (0.125000)
+1512.546238 [PHY]   Symbol rotation 24/28 => tl 0.000857 (-18205,-27245) (0.343750)
+1512.546240 [PHY]   Symbol rotation 25/28 => tl 0.000893 (-30273,12539) (0.562500)
+1512.546242 [PHY]   Symbol rotation 26/28 => tl 0.000929 (6392,32137) (0.781250)
+1512.546244 [PHY]   Symbol rotation 27/28 => tl 0.000964 (32766,0) (1.000000)
+1512.546246 [PHY]   Doing symbol rotation calculation for gNB TX/RX, f0 3619080000.000000 Hz, Nsymb 28
+1512.546249 [PHY]   Symbol rotation 0/28 => tl 0.000000 (18204,-27245) (0.156250)
+1512.546251 [PHY]   Symbol rotation 1/28 => tl 0.000036 (-23170,-23170) (0.375000)
+1512.546253 [PHY]   Symbol rotation 2/28 => tl 0.000072 (-27245,18204) (0.593750)
+1512.546256 [PHY]   Symbol rotation 3/28 => tl 0.000108 (12539,30272) (0.812500)
+1512.546258 [PHY]   Symbol rotation 4/28 => tl 0.000143 (32137,-6393) (0.031250)
+1512.546260 [PHY]   Symbol rotation 5/28 => tl 0.000179 (-1,-32767) (0.250000)
+1512.546262 [PHY]   Symbol rotation 6/28 => tl 0.000215 (-32138,-6393) (0.468750)
+1512.546264 [PHY]   Symbol rotation 7/28 => tl 0.000250 (-12540,30272) (0.687500)
+1512.546266 [PHY]   Symbol rotation 8/28 => tl 0.000286 (27244,18204) (0.906250)
+1512.546277 [PHY]   Symbol rotation 9/28 => tl 0.000322 (23169,-23170) (0.125000)
+1512.546279 [PHY]   Symbol rotation 10/28 => tl 0.000357 (-18205,-27245) (0.343750)
+1512.546281 [PHY]   Symbol rotation 11/28 => tl 0.000393 (-30273,12539) (0.562500)
+1512.546283 [PHY]   Symbol rotation 12/28 => tl 0.000429 (6392,32137) (0.781250)
+1512.546285 [PHY]   Symbol rotation 13/28 => tl 0.000464 (32767,0) (1.000000)
+1512.546288 [PHY]   Symbol rotation 14/28 => tl 0.000500 (18204,-27245) (0.156250)
+1512.546290 [PHY]   Symbol rotation 15/28 => tl 0.000536 (-23170,-23170) (0.375000)
+1512.546292 [PHY]   Symbol rotation 16/28 => tl 0.000572 (-27245,18204) (0.593750)
+1512.546294 [PHY]   Symbol rotation 17/28 => tl 0.000608 (12539,30272) (0.812500)
+1512.546296 [PHY]   Symbol rotation 18/28 => tl 0.000643 (32137,-6393) (0.031250)
+1512.546298 [PHY]   Symbol rotation 19/28 => tl 0.000679 (0,-32767) (0.250000)
+1512.546301 [PHY]   Symbol rotation 20/28 => tl 0.000715 (-32138,-6393) (0.468750)
+1512.546303 [PHY]   Symbol rotation 21/28 => tl 0.000750 (-12540,30272) (0.687500)
+1512.546305 [PHY]   Symbol rotation 22/28 => tl 0.000786 (27244,18204) (0.906250)
+1512.546307 [PHY]   Symbol rotation 23/28 => tl 0.000822 (23169,-23170) (0.125000)
+1512.546309 [PHY]   Symbol rotation 24/28 => tl 0.000857 (-18205,-27245) (0.343750)
+1512.546311 [PHY]   Symbol rotation 25/28 => tl 0.000893 (-30273,12539) (0.562500)
+1512.546314 [PHY]   Symbol rotation 26/28 => tl 0.000929 (6392,32137) (0.781250)
+1512.546316 [PHY]   Symbol rotation 27/28 => tl 0.000964 (32766,0) (1.000000)
+1512.546318 [PHY]   Doing symbol rotation calculation for gNB TX/RX, f0 2609360000.000000 Hz, Nsymb 28
+1512.546320 [PHY]   Symbol rotation 0/28 => tl 0.000000 (-4277,32486) (0.729167)
+1512.546323 [PHY]   Symbol rotation 1/28 => tl 0.000036 (28377,-16384) (0.083333)
+1512.546325 [PHY]   Symbol rotation 2/28 => tl 0.000072 (-30273,-12540) (0.437500)
+1512.546327 [PHY]   Symbol rotation 3/28 => tl 0.000108 (8480,31650) (0.791667)
+1512.546329 [PHY]   Symbol rotation 4/28 => tl 0.000143 (19947,-25996) (0.145833)
+1512.546331 [PHY]   Symbol rotation 5/28 => tl 0.000179 (-32767,-1) (0.500000)
+1512.546333 [PHY]   Symbol rotation 6/28 => tl 0.000215 (19947,25995) (0.854167)
+1512.546336 [PHY]   Symbol rotation 7/28 => tl 0.000250 (8480,-31651) (0.208333)
+1512.546338 [PHY]   Symbol rotation 8/28 => tl 0.000286 (-30273,12539) (0.562500)
+1512.546340 [PHY]   Symbol rotation 9/28 => tl 0.000322 (28377,16383) (0.916667)
+1512.546342 [PHY]   Symbol rotation 10/28 => tl 0.000357 (-4277,-32487) (0.270833)
+1512.546344 [PHY]   Symbol rotation 11/28 => tl 0.000393 (-23170,23169) (0.625000)
+1512.546346 [PHY]   Symbol rotation 12/28 => tl 0.000429 (32486,4276) (0.979167)
+1512.546349 [PHY]   Symbol rotation 13/28 => tl 0.000464 (-16384,-28378) (0.333333)
+1512.546351 [PHY]   Symbol rotation 14/28 => tl 0.000500 (-4277,32486) (0.729167)
+1512.546353 [PHY]   Symbol rotation 15/28 => tl 0.000536 (28377,-16384) (0.083333)
+1512.546355 [PHY]   Symbol rotation 16/28 => tl 0.000572 (-30273,-12540) (0.437500)
+1512.546357 [PHY]   Symbol rotation 17/28 => tl 0.000608 (8480,31650) (0.791667)
+1512.546359 [PHY]   Symbol rotation 18/28 => tl 0.000643 (19947,-25996) (0.145833)
+1512.546362 [PHY]   Symbol rotation 19/28 => tl 0.000679 (-32767,-1) (0.500000)
+1512.546364 [PHY]   Symbol rotation 20/28 => tl 0.000715 (19947,25995) (0.854167)
+1512.546366 [PHY]   Symbol rotation 21/28 => tl 0.000750 (8480,-31651) (0.208333)
+1512.546368 [PHY]   Symbol rotation 22/28 => tl 0.000786 (-30273,12539) (0.562500)
+1512.546370 [PHY]   Symbol rotation 23/28 => tl 0.000822 (28377,16383) (0.916667)
+1512.546372 [PHY]   Symbol rotation 24/28 => tl 0.000857 (-4277,-32487) (0.270833)
+1512.546375 [PHY]   Symbol rotation 25/28 => tl 0.000893 (-23170,23169) (0.625000)
+1512.546377 [PHY]   Symbol rotation 26/28 => tl 0.000929 (32486,4276) (0.979167)
+1512.546379 [PHY]   Symbol rotation 27/28 => tl 0.000964 (-16384,-28378) (0.333333)
+1512.546382 [PHY]   Timeshift symbol rotation 0 => (32767,0) 0.000000
+1512.546384 [PHY]   Timeshift symbol rotation 1 => (32767,0) -0.000000
+1512.546388 [PHY]   Timeshift symbol rotation 2 => (32767,0) -0.000000
+1512.546389 [PHY]   Timeshift symbol rotation 3 => (32767,0) -0.000000
+1512.546391 [PHY]   Timeshift symbol rotation 4 => (32767,0) -0.000000
+1512.546393 [PHY]   Timeshift symbol rotation 5 => (32767,0) -0.000000
+1512.546395 [PHY]   Timeshift symbol rotation 6 => (32767,0) -0.000000
+1512.546397 [PHY]   Timeshift symbol rotation 7 => (32767,0) -0.000000
+1512.546399 [PHY]   Timeshift symbol rotation 8 => (32767,0) -0.000000
+1512.546400 [PHY]   Timeshift symbol rotation 9 => (32767,0) -0.000000
+1512.572751 [PHY]   HW: Configuring card 0, sample_rate 30720000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+1512.572795 [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619080000 Hz, rx_freq 3619080000 Hz, tune_offset 0
+1512.572800 [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 2609360000 Hz, rx_freq 2609360000 Hz, tune_offset 0
+1512.572803 [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+1512.572805 [PHY]   HW: Configuring card 1, sample_rate 30720000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+1512.572808 [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619080000 Hz, rx_freq 3619080000 Hz, tune_offset 0
+1512.572811 [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 2609360000 Hz, rx_freq 2609360000 Hz, tune_offset 0
+1512.572813 [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+1512.572815 [PHY]   HW: Configuring card 2, sample_rate 30720000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+1512.572817 [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619080000 Hz, rx_freq 3619080000 Hz, tune_offset 0
+1512.572820 [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 2609360000 Hz, rx_freq 2609360000 Hz, tune_offset 0
+1512.572823 [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+1512.572825 [PHY]   HW: Configuring card 3, sample_rate 30720000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+1512.572827 [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619080000 Hz, rx_freq 3619080000 Hz, tune_offset 0
+1512.572829 [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 2609360000 Hz, rx_freq 2609360000 Hz, tune_offset 0
+1512.572832 [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+1512.572834 [PHY]   HW: Configuring card 4, sample_rate 30720000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+1512.572836 [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619080000 Hz, rx_freq 3619080000 Hz, tune_offset 0
+1512.572839 [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 2609360000 Hz, rx_freq 2609360000 Hz, tune_offset 0
+1512.572841 [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+1512.572843 [PHY]   HW: Configuring card 5, sample_rate 30720000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+1512.572845 [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619080000 Hz, rx_freq 3619080000 Hz, tune_offset 0
+1512.572848 [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 2609360000 Hz, rx_freq 2609360000 Hz, tune_offset 0
+1512.572851 [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+1512.572852 [PHY]   HW: Configuring card 6, sample_rate 30720000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+1512.572855 [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619080000 Hz, rx_freq 3619080000 Hz, tune_offset 0
+1512.572857 [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 2609360000 Hz, rx_freq 2609360000 Hz, tune_offset 0
+1512.572860 [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+1512.572862 [PHY]   HW: Configuring card 7, sample_rate 30720000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+1512.572864 [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619080000 Hz, rx_freq 3619080000 Hz, tune_offset 0
+1512.572867 [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 2609360000 Hz, rx_freq 2609360000 Hz, tune_offset 0
+1512.572877 [PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+1512.572907 [HW]   # /dev/cpu_dma_latency set to 2 us
+1512.662553 [NR_PHY]   Intializing Sidelink UE Threads for instance 0 (0x62960f543140,0x74d389e37010)...
+1512.666788 [NR_RRC]   create TASK_RRC_NRUE 
+1512.676436 [ITTI]   Created Posix thread TASK_RRC_NRUE
+1512.680800 [ITTI]   Created Posix thread TASK_NAS_NRUE
+1512.681468 [HW]   openair0_cfg[0].sdr_addrs == 'type=b200,serial=3293E7C'
+1512.681476 [HW]   openair0_cfg[0].clock_source == '0' (internal = 0, external = 1)
+1512.681486 [HW]   UHD version 4.8.0.0-0ubuntu1~jammy1 (4.8.0)
+1512.681490 [HW]   Checking for USRP with args type=b200,serial=3293E7C
+1512.725948 [HW]   Found USRP b200
+1513.625581 [HW]   Setting clock source to internal
+1513.625612 [HW]   Setting time source to internal
+CMDLINE: "./ran_build/build/nr-uesoftmodem" "--sl-mode" "2" "--sync-ref" "--rbsl" "52" "--numerology" "1" "--band" "38" "--SLC" "2600000000" "--ue-txgain" "0" "--usrp-args" "type=b200,serial=3293E7C" "--log_config.global_log_options" "time,nocolor" 
+[CONFIG] get parameters from cmdline , debug flags: 0x00400000
+[CONFIG] log_config: 2/3 parameters successfully set 
+[CONFIG] log_config: 56/56 parameters successfully set 
+[CONFIG] log_config: 56/56 parameters successfully set 
+[CONFIG] log_config: 16/16 parameters successfully set 
+[CONFIG] log_config: 16/16 parameters successfully set 
+log init done
+[CONFIG] (root): 11/11 parameters successfully set 
+[CONFIG] (root): 38/43 parameters successfully set 
+[CONFIG] (root): 4/5 parameters successfully set 
+[CONFIG] TTracer: 3/3 parameters successfully set 
+create a thread for core -1
+create a thread for core -1
+create a thread for core -1
+create a thread for core -1
+create a thread for core -1
+create a thread for core -1
+create a thread for core -1
+create a thread for core -1
+CPU Freq is 2.208660 
+[CONFIG] opt: 3/3 parameters successfully set 
+[CONFIG] loader: 2/2 parameters successfully set 
+[CONFIG] loader.ldpc: 1/2 parameters successfully set 
+shlib_path libldpc.so
+[LOADER] library libldpc.so successfully loaded
+[CONFIG] (root): 28/28 parameters successfully set 
+[CONFIG] loader.dfts: 1/2 parameters successfully set 
+shlib_path libdfts.so
+[LOADER] library libdfts.so successfully loaded
+UE threads created by 17987
+TYPE <CTRL-C> TO TERMINATE
+[CONFIG] device.recplay: 8/8 parameters successfully set 
+[CONFIG] device: 1/1 parameters successfully set 
+[CONFIG] loader.oai_device: 1/2 parameters successfully set 
+shlib_path liboai_device.so
+[LOADER] library liboai_device.so successfully loaded
+1513.746085 [HW]   cal 0: freq 3500000000.000000, offset 44.000000, diff 890640000.000000
+1513.746113 [HW]   cal 1: freq 2660000000.000000, offset 49.800000, diff 50640000.000000
+1513.746119 [HW]   cal 2: freq 2300000000.000000, offset 51.000000, diff 309360000.000000
+1513.746124 [HW]   cal 3: freq 1880000000.000000, offset 53.000000, diff 729360000.000000
+1513.746129 [HW]   cal 4: freq 816000000.000000, offset 57.000000, diff 1793360000.000000
+1513.746310 [HW]   RX Gain 0 110.000000 (49.800000) => 60.200000 (max 76.000000)
+1513.771101 [HW]   USRP TX_GAIN:89.75 gain_range:89.75 tx_gain:0.00
+1513.771124 [HW]   Actual master clock: 30.720000MHz...
+1513.771138 [HW]   Actual clock source internal...
+1513.771147 [HW]   Actual time source internal...
+1514.771767 [HW]   RF board max packet size 1916, size for 100µs jitter 3072 
+1514.772256 [HW]   rx_max_num_samps 1916
+1514.772265 [HW]   setting rx channel 0
+1514.795952 [HW]   RX Channel 0
+1514.795983 [HW]     Actual RX sample rate: 30.720000MSps...
+1514.796031 [HW]     Actual RX frequency: 2.609360GHz...
+1514.796082 [HW]     Actual RX gain: 60.000000...
+1514.796100 [HW]     Actual RX bandwidth: 20.000000M...
+1514.796118 [HW]     Actual RX antenna: RX2...
+1514.796120 [HW]   TX Channel 0
+1514.796141 [HW]     Actual TX sample rate: 30.720000MSps...
+1514.796177 [HW]     Actual TX frequency: 2.609360GHz...
+1514.796223 [HW]     Actual TX gain: 89.750000...
+1514.796253 [HW]     Actual TX bandwidth: 20.000000M...
+1514.796270 [HW]     Actual TX antenna: TX/RX...
+1514.796273 [HW]     Actual TX packet size: 1916
+1514.796362 [HW]   Device timestamp: 1.707400...
+1514.796369 [HW]   [RRU] has loaded USRP B200 device.
+1514.808314 [NR_PHY]   Resynchronizing RX by 0 samples (mode = 6)
+1515.965890 [PHY]   *** SL-SSB slot allocation  16.2 ***
+1515.965938 [NR_PHY]   PSBCH SL generation started
+1515.975912 [PHY]   *** SL-SSB slot allocation  17.2 ***
+1515.975939 [NR_PHY]   PSBCH SL generation started
+1516.125919 [PHY]   *** SL-SSB slot allocation  32.2 ***
+1516.125960 [NR_PHY]   PSBCH SL generation started
+1516.135899 [PHY]   *** SL-SSB slot allocation  33.2 ***
+1516.135932 [NR_PHY]   PSBCH SL generation started
+1516.285899 [PHY]   *** SL-SSB slot allocation  48.2 ***
+1516.285956 [NR_PHY]   PSBCH SL generation started
+1516.295893 [PHY]   *** SL-SSB slot allocation  49.2 ***
+1516.295926 [NR_PHY]   PSBCH SL generation started
+1516.445906 [PHY]   *** SL-SSB slot allocation  64.2 ***
+1516.445945 [NR_PHY]   PSBCH SL generation started
+1516.455920 [PHY]   *** SL-SSB slot allocation  65.2 ***
+1516.455955 [NR_PHY]   PSBCH SL generation started
+1516.605923 [PHY]   *** SL-SSB slot allocation  80.2 ***
+1516.605961 [NR_PHY]   PSBCH SL generation started
+1516.615900 [PHY]   *** SL-SSB slot allocation  81.2 ***
+1516.615940 [NR_PHY]   PSBCH SL generation started
+1516.765899 [PHY]   *** SL-SSB slot allocation  96.2 ***
+1516.765943 [NR_PHY]   PSBCH SL generation started
+1516.775910 [PHY]   *** SL-SSB slot allocation  97.2 ***
+1516.775945 [NR_PHY]   PSBCH SL generation started
+1516.925911 [PHY]   *** SL-SSB slot allocation  112.2 ***
+1516.925949 [NR_PHY]   PSBCH SL generation started
+1516.935907 [PHY]   *** SL-SSB slot allocation  113.2 ***
+1516.935936 [NR_PHY]   PSBCH SL generation started
+1517.085898 [PHY]   *** SL-SSB slot allocation  128.2 ***
+1517.085927 [NR_PHY]   PSBCH SL generation started
+1517.095889 [PHY]   *** SL-SSB slot allocation  129.2 ***
+1517.095917 [NR_PHY]   PSBCH SL generation started
+1517.245897 [PHY]   *** SL-SSB slot allocation  144.2 ***
+1517.245941 [NR_PHY]   PSBCH SL generation started
+1517.255907 [PHY]   *** SL-SSB slot allocation  145.2 ***
+1517.255942 [NR_PHY]   PSBCH SL generation started
+1517.405914 [PHY]   *** SL-SSB slot allocation  160.2 ***
+1517.405935 [NR_PHY]   PSBCH SL generation started
+1517.415928 [PHY]   *** SL-SSB slot allocation  161.2 ***
+1517.415956 [NR_PHY]   PSBCH SL generation started
+1517.565923 [PHY]   *** SL-SSB slot allocation  176.2 ***
+1517.565946 [NR_PHY]   PSBCH SL generation started
+1517.575932 [PHY]   *** SL-SSB slot allocation  177.2 ***
+1517.575964 [NR_PHY]   PSBCH SL generation started
+1517.725904 [PHY]   *** SL-SSB slot allocation  192.2 ***
+1517.725929 [NR_PHY]   PSBCH SL generation started
+1517.735906 [PHY]   *** SL-SSB slot allocation  193.2 ***
+1517.735936 [NR_PHY]   PSBCH SL generation started
+1517.885920 [PHY]   *** SL-SSB slot allocation  208.2 ***
+1517.885961 [NR_PHY]   PSBCH SL generation started
+1517.895930 [PHY]   *** SL-SSB slot allocation  209.2 ***
+1517.895972 [NR_PHY]   PSBCH SL generation started
+1518.045919 [PHY]   *** SL-SSB slot allocation  224.2 ***
+1518.045964 [NR_PHY]   PSBCH SL generation started
+1518.055917 [PHY]   *** SL-SSB slot allocation  225.2 ***
+1518.055965 [NR_PHY]   PSBCH SL generation started
+1518.205903 [PHY]   *** SL-SSB slot allocation  240.2 ***
+1518.205945 [NR_PHY]   PSBCH SL generation started
+1518.215949 [PHY]   *** SL-SSB slot allocation  241.2 ***
+1518.216005 [NR_PHY]   PSBCH SL generation started
+1518.365944 [PHY]   *** SL-SSB slot allocation  256.2 ***
+1518.365969 [NR_PHY]   PSBCH SL generation started
+1518.375916 [PHY]   *** SL-SSB slot allocation  257.2 ***
+1518.375947 [NR_PHY]   PSBCH SL generation started
+1518.525901 [PHY]   *** SL-SSB slot allocation  272.2 ***
+1518.525941 [NR_PHY]   PSBCH SL generation started
+1518.535920 [PHY]   *** SL-SSB slot allocation  273.2 ***
+1518.535964 [NR_PHY]   PSBCH SL generation started
+1518.685883 [PHY]   *** SL-SSB slot allocation  288.2 ***
+1518.685920 [NR_PHY]   PSBCH SL generation started
+1518.695943 [PHY]   *** SL-SSB slot allocation  289.2 ***
+1518.695978 [NR_PHY]   PSBCH SL generation started
+1518.845925 [PHY]   *** SL-SSB slot allocation  304.2 ***
+1518.845957 [NR_PHY]   PSBCH SL generation started
+1518.855942 [PHY]   *** SL-SSB slot allocation  305.2 ***
+1518.855976 [NR_PHY]   PSBCH SL generation started
+1519.005891 [PHY]   *** SL-SSB slot allocation  320.2 ***
+1519.005928 [NR_PHY]   PSBCH SL generation started
+1519.015907 [PHY]   *** SL-SSB slot allocation  321.2 ***
+1519.015933 [NR_PHY]   PSBCH SL generation started
+1519.165886 [PHY]   *** SL-SSB slot allocation  336.2 ***
+1519.165919 [NR_PHY]   PSBCH SL generation started
+1519.175930 [PHY]   *** SL-SSB slot allocation  337.2 ***
+1519.175958 [NR_PHY]   PSBCH SL generation started
+1519.325915 [PHY]   *** SL-SSB slot allocation  352.2 ***
+1519.325940 [NR_PHY]   PSBCH SL generation started
+1519.335903 [PHY]   *** SL-SSB slot allocation  353.2 ***
+1519.335933 [NR_PHY]   PSBCH SL generation started
+1519.485896 [PHY]   *** SL-SSB slot allocation  368.2 ***
+1519.485938 [NR_PHY]   PSBCH SL generation started
+1519.495894 [PHY]   *** SL-SSB slot allocation  369.2 ***
+1519.495920 [NR_PHY]   PSBCH SL generation started
+1519.645894 [PHY]   *** SL-SSB slot allocation  384.2 ***
+1519.645930 [NR_PHY]   PSBCH SL generation started
+1519.655966 [PHY]   *** SL-SSB slot allocation  385.2 ***
+1519.656005 [NR_PHY]   PSBCH SL generation started
+1519.805904 [PHY]   *** SL-SSB slot allocation  400.2 ***
+1519.805931 [NR_PHY]   PSBCH SL generation started
+1519.815903 [PHY]   *** SL-SSB slot allocation  401.2 ***
+1519.815935 [NR_PHY]   PSBCH SL generation started
+1519.965883 [PHY]   *** SL-SSB slot allocation  416.2 ***
+1519.965912 [NR_PHY]   PSBCH SL generation started
+1519.975893 [PHY]   *** SL-SSB slot allocation  417.2 ***
+1519.975921 [NR_PHY]   PSBCH SL generation started
+1520.125881 [PHY]   *** SL-SSB slot allocation  432.2 ***
+1520.125922 [NR_PHY]   PSBCH SL generation started
+1520.135931 [PHY]   *** SL-SSB slot allocation  433.2 ***
+1520.135962 [NR_PHY]   PSBCH SL generation started
+sleep...
+sleep...
+sleep...
+sleep...
+sleep...
+sleep...
+sleep...
+sleep...
+sleep...
+1520.285940 [PHY]   *** SL-SSB slot allocation  448.2 ***
+1520.285963 [NR_PHY]   PSBCH SL generation started
+1520.295887 [PHY]   *** SL-SSB slot allocation  449.2 ***
+1520.295915 [NR_PHY]   PSBCH SL generation started
+1520.445884 [PHY]   *** SL-SSB slot allocation  464.2 ***
+1520.445913 [NR_PHY]   PSBCH SL generation started
+1520.455877 [PHY]   *** SL-SSB slot allocation  465.2 ***
+1520.455904 [NR_PHY]   PSBCH SL generation started
+1520.605882 [PHY]   *** SL-SSB slot allocation  480.2 ***
+1520.605913 [NR_PHY]   PSBCH SL generation started
+1520.615897 [PHY]   *** SL-SSB slot allocation  481.2 ***
+1520.615921 [NR_PHY]   PSBCH SL generation started
+1520.765904 [PHY]   *** SL-SSB slot allocation  496.2 ***
+1520.765945 [NR_PHY]   PSBCH SL generation started
+1520.775886 [PHY]   *** SL-SSB slot allocation  497.2 ***
+1520.775928 [NR_PHY]   PSBCH SL generation started
+1520.925889 [PHY]   *** SL-SSB slot allocation  512.2 ***
+1520.925935 [NR_PHY]   PSBCH SL generation started
+1520.935880 [PHY]   *** SL-SSB slot allocation  513.2 ***
+1520.935925 [NR_PHY]   PSBCH SL generation started
+1521.085877 [PHY]   *** SL-SSB slot allocation  528.2 ***
+1521.085913 [NR_PHY]   PSBCH SL generation started
+1521.095906 [PHY]   *** SL-SSB slot allocation  529.2 ***
+1521.095945 [NR_PHY]   PSBCH SL generation started

@@ -56,16 +56,21 @@
 #include "openair1/PHY/MODULATION/nr_modulation.h"
 #include "openair1/SIMULATION/TOOLS/sim.h"
 //#define DEBUG_PHY_PROC
+#include <sys/socket.h>
+#include <fcntl.h>
+#include <arpa/inet.h>
+
 #define NR_PDCCH_SCHED
 //#define NR_PDCCH_SCHED_DEBUG
 //#define NR_PUCCH_SCHED
 //#define NR_PUCCH_SCHED_DEBUG
 //#define NR_PDSCH_DEBUG
 #define HNA_SIZE 16 * 68 * 384 // [hna] 16 segments, 68*Zc
-#define LDPC_MAX_LIMIT 31
+#define LDPC_MAX_LIMIT 63
 #ifndef PUCCH
 #define PUCCH
 #endif
+
 
 #include "common/utils/LOG/log.h"
 
@@ -1448,6 +1453,8 @@ int phy_procedures_nrUE_SL_RX(PHY_VARS_NR_UE *ue,
 
   int frame_rx = proc->frame_rx;
   int slot_rx = proc->nr_slot_rx;
+  LOG_I(PHY,"SLOT_RX: %d \n", slot_rx);
+  nr_ue_rrc_measurements(ue, proc, slot_rx);
 
   if ( getenv("RFSIMULATOR") != NULL ) {
     if (get_softmodem_params()->sl_mode == 2) {
@@ -1531,6 +1538,7 @@ validate_rx_payload(NR_DL_UE_HARQ_t *harq, int frame_rx, int slot_rx, bool polar
   uint32_t slot_tx = 0;
   unsigned char  randm_tx =0;
   static uint16_t sum_passed = 0;
+
   static uint16_t sum_failed = 0;
   uint8_t comparison_beg_byte = 4;
   uint8_t comparison_end_byte = 10;
@@ -1587,15 +1595,22 @@ void validate_rx_payload_str(NR_DL_UE_HARQ_t *harq, int slot, bool polar_decoded
   char default_input[MAX_MSG_SIZE] = {};
   char *sl_user_msg = get_softmodem_params()->sl_user_msg;
   char *test_input = (sl_user_msg != NULL) ? sl_user_msg : default_input;
-  uint32_t default_msg_len = (sl_user_msg != NULL) ? strlen(sl_user_msg) : MAX_MSG_SIZE;
+  uint32_t default_msg_len = (sl_user_msg != NULL) ? 32 : MAX_MSG_SIZE;
+
+
+ 
+
   uint32_t test_msg_len = min(strlen((char *) harq->b), min(default_msg_len, harq->TBS));
 
   static uint16_t sum_passed = 0;
   static uint16_t sum_failed = 0;
   uint8_t comparison_end_byte = test_msg_len;
 
+  static uint32_t total_bits = 0;
   if (polar_decoded == true) {
     for (int i = 0; i < test_msg_len * 8; i++) { //max tx string size is 32 bytes
+				       //
+						 //
       estimated_output_bit[i] = (harq->b[i / 8] & (1 << (i & 7))) >> (i & 7);
       test_input_bit[i] = (test_input[i / 8] & (1 << (i & 7))) >> (i & 7); // Further correct for multiple segments
       if(i % 8 == 0){
@@ -1618,11 +1633,25 @@ void validate_rx_payload_str(NR_DL_UE_HARQ_t *harq, int slot, bool polar_decoded
       LOG_D(NR_PHY, "result[%d]=%c\n", i, result[i]);
     }
     char *usr_msg_ptr = &result[0];
+    struct sockaddr_in remote_addr;
+    memset(&remote_addr, 0, sizeof(remote_addr));
+    remote_addr.sin_family = AF_INET;
+    remote_addr.sin_port = htons(9999); 
+    inet_pton(AF_INET, "127.0.0.1", &remote_addr.sin_addr);
+
+    char *a = "a";
+
+    ssize_t sent_len = sendto(udp_socket, usr_msg_ptr, test_msg_len, 0,
+(struct sockaddr *)&remote_addr, sizeof(remote_addr));
+    
+
     char msg_head_tail[128] = "Received your text! It says: ";
+
     memset(msg_head_tail, '+', min(128, strlen(msg_head_tail) + AVG_MSG_SIZE));
     LOG_I(NR_PHY, "%s\n", msg_head_tail);
-    LOG_I(NR_PHY, "Received your text! It says: %s\n", usr_msg_ptr);
-    LOG_D(NR_PHY, "Decoded_payload for slot %d: %s\n", slot, result);
+
+    LOG_I(NR_PHY, "Received your text! It says: %s, %d\n", usr_msg_ptr,slot);
+    LOG_I(NR_PHY, "Decoded_payload for slot %d: %s\n", slot, result);
     LOG_I(NR_PHY, "%s\n", msg_head_tail);
   }
 
@@ -1634,7 +1663,10 @@ void validate_rx_payload_str(NR_DL_UE_HARQ_t *harq, int slot, bool polar_decoded
   } else if (sl_user_msg != NULL) {
     ++sum_passed;
     LOG_I(PHY, "PSSCH test OK with %d / %d = %4.2f\n", sum_passed, (sum_passed + sum_failed), (float) sum_passed / (float) (sum_passed + sum_failed));
+
   }
+  total_bits = harq->G * (sum_passed + sum_failed);
+  LOG_I(NR_PHY, "total bits: %d \n", total_bits);
 }
 
 int phy_procedures_nrUE_RX(PHY_VARS_NR_UE *ue,

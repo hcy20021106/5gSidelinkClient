@@ -36,7 +36,12 @@
 #include "openair2/NR_UE_PHY_INTERFACE/NR_IF_Module.h"
 #include "openair1/PHY/NR_REFSIG/sss_nr.h"
 #include "common/utils/nr/nr_common.h"
+#include <sys/socket.h>
+#include <fcntl.h>
+#include <arpa/inet.h>
+
 //#define DEBUG_PHY_SL_PROC
+
 
 /*
  *  NR SLOT PROCESSING SEQUENCE
@@ -772,7 +777,12 @@ void readFrame(PHY_VARS_NR_UE *UE,  openair0_timestamp *timestamp, bool toTrash)
 
   void *rxp[NB_ANTENNAS_RX];
 
-  for(int x=0; x<20; x++) {  // two frames for initial sync
+
+  for(int x=0; x<20; x++) {  //two frames for initial sync
+			    //
+			   //
+			     //
+			     //
     for (int slot=0; slot<UE->frame_parms.slots_per_subframe; slot ++ ) {
       for (int i=0; i<UE->frame_parms.nb_antennas_rx; i++) {
         if (toTrash)
@@ -884,8 +894,22 @@ int slot_to_flag_sl(uint8_t tdd_period, int slot, uint16_t slot_config, uint16_t
   return flag;
 }
 
+
+
+void init_udp_socket() {
+	struct sockaddr_in addr;
+	udp_socket = socket(AF_INET, SOCK_DGRAM, 0);
+	if (udp_socket < 0) {
+
+		perror("UDP socket create failed");
+		exit(1);
+	}
+
+
+}
 void *UE_thread_SL(void *arg) {
   PHY_VARS_NR_UE *UE = (PHY_VARS_NR_UE *) arg;
+  init_udp_socket();
   openair0_timestamp timestamp, writeTimestamp;
   void *rxp[NB_ANTENNAS_RX], *txp[NB_ANTENNAS_TX];
   AssertFatal(0 == openair0_device_load(&(UE->rfdevice), &openair0_cfg[0]), "");
@@ -946,8 +970,9 @@ void *UE_thread_SL(void *arg) {
         start_rx_stream = 0;
       } else {
         LOG_I(PHY, "Nearby UE: sync_running_sl still in readFrame due to INVALID res.\n");
-        readFrame(UE, &timestamp, true);
+	readFrame(UE, &timestamp, true);
         trashed_frames += 2;
+
         continue;
       }
     }

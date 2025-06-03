@@ -126,7 +126,8 @@ parser.add_argument('--debug', action='store_true', help="""
 Enable debug logging (for this script only)
 """)
 
-parser.add_argument('--repeat', '-r', default=1, type=int, help="""
+parser.add_argument('--repeat', '-r', default=10, type=int, help="""
+
 The number of repeated test iterations (default: %(default)s)
 """)
 
@@ -142,7 +143,8 @@ parser.add_argument('--test', '-t', default='rfsim', choices='rfsim usrp psbchsi
 The kind of test scenario to run. The options include rfsim, usrp, psbchsim, and psschsim. (default: %(default)s)
 """)
 
-parser.add_argument('--snr', default='0.0', help="""
+parser.add_argument('--snr', default='45', help="""
+
 Setting snr values (default: %(default)s)
 """)
 
@@ -383,15 +385,19 @@ class TestThread(threading.Thread):
                 line = line.decode()
             if 'usrp' == OPTS.test:
                 LOGGER.info(line.strip())
-            # 'SyncRef UE found. PSSCH-RSRP: -102 dBm/RE SSS-RSRP: -100 dBm/RE passed 99 total 100 It took {delta_time_s} seconds'
+            # 'SyncRef UE found. PSSCH-RSRP: -102 dBm/RE SSS-RSRP: -100 dBm/RE passed 99 total 100 It took {delta_time_s} seconds with data rate {data_rate} bit/s'
             if 'SyncRef UE found' in line:
-                fields = line.split(maxsplit=20)
+
+                fields = line.split(maxsplit=25)
                 if len(fields) > 6:
-                    pssch_rsrp = float(fields[-13])
-                    ssb_rsrp = float(fields[-10])
-                    nb_decoded = int(fields[-7])
-                    total_rx = int(fields[-5])
-                    sync_duration = float(fields[-2])
+
+                    pssch_rsrp = float(fields[4])
+
+
+                    ssb_rsrp = float(fields[7])
+                    nb_decoded = int(fields[10])
+                    total_rx = int(fields[12])
+                    sync_duration = float(fields[15])
                     result_metric = (pssch_rsrp, ssb_rsrp, nb_decoded, total_rx, sync_duration)
                     job.passed_metric += [result_metric]
                     return

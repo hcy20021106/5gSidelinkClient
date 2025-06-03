@@ -567,7 +567,8 @@ static inline int log_header(log_component_t *c,
   char timeString[32];
   if ( flag & FLAG_TIME ) {
     struct timespec t;
-    if (clock_gettime(CLOCK_MONOTONIC, &t) == -1)
+    if (clock_gettime(CLOCK_REALTIME, &t) == -1)
+
         abort();
     snprintf(timeString, sizeof(timeString), "%lu.%06lu ",
              t.tv_sec,
